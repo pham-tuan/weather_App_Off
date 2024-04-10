@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.tuan.appweatheroff.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.tuan.appweatheroff.MainFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_mainFragment_to_listFragment"
+            app:destination="@id/ListFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/DayFragment"
+        android:name="com.tuan.appweatheroff.DayFragment"
+        android:label="DayFragment"
+        tools:layout="@layout/fragment_day">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/tenDayFragment"
+        android:name="com.tuan.appweatheroff.TenDay_Fragment"
+        android:label="TenDayFragment"
+        tools:layout="@layout/fragment_ten_day_">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/ListFragment"
+        android:name="com.tuan.appweatheroff.ListFragment"
+        android:label="ListFragment"
+        tools:layout="@layout/fragment_list">
+
+    </fragment>
+
+</navigation>
